@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Astronauts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js">
+    window.addEventListener("load", function() {
+      fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response) {
+        response.json().then( function(json) {
+          const dif = document.getElementById("Astronuts");
+
+          div.innerHTML = `
+          <h1> Astronauts <h1>
+            <div id="container">
+              <div class="astronaut">
+                <div class="bio">
+                  <h3> Name ${json.firstName} ${json.lastname} </h3>
+                  <ul>
+                    <li> Hours in Space: ${hoursInSpace} </li>
+                    <li> Active: ${active} </li>
+                    <li> Skills: ${skills} </li>
+                  </ul>
+                </div>
+              <img src="${picture}"
+            </div>
+            `
+            )};
+      )};
+    )};
+      </script>
+    // <h1>Astronauts</h1>
+    // <div id="container">
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Mae Jemison</h3>
+    //       <ul>
+    //         <li>Hours in space: 190</li>
+    //         <li>Active: false</li>
+    //         <li>Skills: Physician, Chemical Engineer</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/mae-jemison.jpg">
+    //   </div>
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Frederick Gregory</h3>
+    //       <ul>
+    //         <li>Hours in space: 455</li>
+    //         <li>Active: false</li>
+    //         <li>Skills: Information Systems, Shuttle Pilot, Fighter Pilot, Helicpoter Pilor, Colonel USAF</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/frederick-gregory.jpg">
+    //   </div>
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Ellen Ochoa</h3>
+    //       <ul>
+    //         <li>Hours in space: 979</li>
+    //         <li>Active: false</li>
+    //         <li>Skills: Electrical Engineer</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/ellen-ochoa.jpg">
+    //   </div>
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Guion Bluford</h3>
+    //       <ul>
+    //         <li>Hours in space: 686</li>
+    //         <li>Active: false</li>
+    //         <li>Skills: Aerospace Engineer, Philosophy, Physics, Colonel Usaf, Fighter Pilot</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/mae-jemison.jpg">
+    //   </div>
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Sally Ride</h3>
+    //       <ul>
+    //         <li>Hours in space: 343</li>
+    //         <li>Active: false</li>
+    //         <li>Skills: Physicist, Astrophysics</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/mae-jemison.jpg">
+    //   </div>
+    //   <div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Kjell Lindgren</h3>
+    //       <ul>
+    //         <li>Hours in space: 15</li>
+    //         <li>Active: true</li>
+    //         <li>Skills: Physician, Surgeon, Emergency Medicine</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/kjell-lindgren.jpg">
+    //   </div><div class="astronaut">
+    //     <div class="bio">
+    //       <h3>Jeanette Epps</h3>
+    //       <ul>
+    //         <li>Hours in space: 0</li>
+    //         <li>Active: true</li>
+    //         <li>Skills: Physicist, Philosophy, Aerospace Engineer</li>
+    //       </ul>
+    //     </div>
+    //     <img class="avatar" src="images/jeanette-epps.jpg">
+    //   </div>
+    // </div>
+  </body>
+</html>
